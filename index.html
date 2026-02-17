@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Chinese New Year</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- 视频容器 -->
+    <div id="video-container" class="video-container">
+        <video id="main-video" class="main-video" playsinline webkit-playsinline>
+            <source src="videos/horse-year-intro.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <!-- 点击播放覆盖层 -->
+        <div id="play-overlay" class="play-overlay">
+            <div class="play-button">
+                <span class="play-icon">▶</span>
+                <p class="play-text">Happy Chinese New Year</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 生成卡片按钮（视频播放完显示） -->
+    <div id="generate-btn-container" class="generate-btn-container hidden">
+        <button id="generate-card-btn" class="generate-btn">
+            <span class="btn-icon">🎁</span>
+            <span class="btn-text">One-Click Horse Year Greeting Card</span>
+        </button>
+    </div>
+
+    <!-- 祝福卡片展示 -->
+    <div id="card-modal" class="card-modal hidden">
+        <div class="card-modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div id="card-display" class="card-display">
+                <!-- 卡片内容将通过JS动态生成 -->
+            </div>
+          
+        </div>
+    </div>
+
+    <!-- 加载动画 -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Greeting Card...</p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
